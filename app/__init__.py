@@ -27,12 +27,8 @@ def create_app(config_name):
     mail.init_app(app)
     configure_uploads(app,photos)
 
-
-
     from .request import configure_request
     configure_request(app)
-
-
 
     from .main import main as main_blueprint
     app.register_blueprint(main_blueprint)
