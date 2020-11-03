@@ -7,13 +7,11 @@ from ..models import Blogs,Comments,Users
 from ..request import get_quote
 from ..email import mail_message
 
-
-
 @main.route("/",methods=['POST','GET'])
 def index():
     quote=get_quote()
     title="Blog"
-    message="Pythoning Tutorials"
+    message="WELCOME TO WONDERFUL POEMS"
     blogs=Blogs.query.all()
     top_blog=Blogs.query.all()
     top_blog.reverse()
@@ -31,9 +29,8 @@ def new_blog():
     
     emails=Comments.query.all()
     all_emails=[]
-    for emal in emails:
+    for email in emails:
         all_emails.append(emal.email)
-
 
     form=AdminBlog()
     if form.validate_on_submit():
@@ -60,8 +57,6 @@ def read_blog(id):
         comments=Comments(blog_id=id,email=form.email.data,username=form.name.data,comment=form.comment.data)
         comments.save_comments()
         return redirect(url_for('main.read_blog',id=blog_id))
-
-
 
     format_blog=markdown2.markdown(blog.body,extras=["code-friendly", "fenced-code-blocks"])
 
