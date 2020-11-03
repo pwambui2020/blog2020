@@ -9,7 +9,6 @@ class CommentForm(FlaskForm):
     submit=SubmitField("Submit")
 
 class AdminBlog(FlaskForm):
-
     title=StringField("Title",validators=[Required()])
     body=TextAreaField("Blog Body")
     submit=SubmitField("Submit")
