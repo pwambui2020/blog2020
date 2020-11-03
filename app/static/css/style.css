@@ -4,7 +4,7 @@
 
 }
 #delete{
-  background-color:  red !important;
+  background-color: blue !important;
 }
 img{
   max-width: 100%;
@@ -12,7 +12,7 @@ img{
   height: 400px;
 }
 #bac{
-  background-image: url(../photos/poetry2.jpg);
+  background-image: url(../img/author.jpg); 
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -60,5 +60,6 @@ pre{
   color: white;
 }
 #login{
+  color: antiquewhite;
   
 }
