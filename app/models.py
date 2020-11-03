@@ -39,8 +39,6 @@ class Blogs(db.Model):
     title=db.Column(db.String())
     body=db.Column(db.String())
 
-
-
 class Comments(db.Model):
     __tablename__='comments'
     id=db.Column(db.Integer,primary_key=True)
@@ -50,7 +48,6 @@ class Comments(db.Model):
     blog_id=db.Column(db.Integer)
     posted = db.Column(db.DateTime,default=datetime.utcnow)
     
-
     def save_comments(self):
         db.session.add(self);
         db.session.commit()
@@ -64,9 +61,6 @@ class Quote:
     def __init__(self,quote,author):
         self.quote=quote
         self.author=author
-
-
-
 
 class Role(db.Model):
     __tablename__='roles'
