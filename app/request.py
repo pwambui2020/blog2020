@@ -1,8 +1,6 @@
 from .models import Quote
 import urllib.request,json
 
-
-
 base_url=None
 
 def configure_request(app):
@@ -17,7 +15,6 @@ def get_quote():
         quote_results=None
         quote_results=get_quote_response
         quote_results=process_result(quote_results)
-
 
     return quote_results
 
