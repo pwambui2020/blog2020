@@ -49,7 +49,7 @@ class Comments(db.Model):
     posted = db.Column(db.DateTime,default=datetime.utcnow)
     
     def save_comments(self):
-        db.session.add(self);
+        db.session.add(self)
         db.session.commit()
 
     @classmethod
