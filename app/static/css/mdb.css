@@ -1400,15 +1400,15 @@ button.bg-primary:focus {
   border-color: #4285f4 !important; }
 
 .bg-danger {
-  background-color: #ff3547 !important; }
+  background-color: black !important; }
 
 a.bg-danger:hover, a.bg-danger:focus,
 button.bg-danger:hover,
 button.bg-danger:focus {
-  background-color: #ff0219 !important; }
+  background-color: black !important; }
 
 .border-danger {
-  border-color: #ff3547 !important; }
+  border-color: black !important; }
 
 .bg-warning {
   background-color: #ffbb33 !important; }
