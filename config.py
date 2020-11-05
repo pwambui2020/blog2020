@@ -24,7 +24,7 @@ class Config:
     MAIL_PASSWORD = os.environ.get("MAIL_PASSWORD")
 
 class DevConfig(Config):
-   
+    SQLALCHEMY_DATABASE_URI=os.environ.get("DATABASE_URL")
     DEBUG=True
 class ProdConfig(Config):
     
