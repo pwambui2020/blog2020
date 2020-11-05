@@ -4,7 +4,7 @@ class Config:
     SIMPLEMDE_JS_IIFE = True
     SIMPLEMDE_USE_CDN = True
     QUOTE_BASE_URL="http://quotes.stormconsultancy.co.uk/random.json"
-
+    SQLALCHEMY_DATABASE_URI='postgresql+psycopg2://wambui:neema@localhost/blog'
     UPLOADED_PHOTOS_DEST ='app/static/photos'
 
     '''
