@@ -24,11 +24,10 @@ class Config:
     MAIL_PASSWORD = os.environ.get("MAIL_PASSWORD")
 
 class DevConfig(Config):
-    SQLALCHEMY_DATABASE_URI=os.environ.get("DATABASE_URL")
-    DEBUG=True
+    SQLALCHEMY_DATABASE_URI='postgresql+psycopg2://wambui:neema@localhost/blog'
 class ProdConfig(Config):
     
-    SQLALCHEMY_DATABASE_URI=os.environ.get("DATABASE_URL")
+    SQLALCHEMY_DATABASE_URI='postgresql+psycopg2://wambui:neema@localhost/blog'
 
 class TestConfig(Config):
     SQLALCHEMY_DATABASE_URI='postgresql+psycopg2://wambui:neema@localhost/blog'
